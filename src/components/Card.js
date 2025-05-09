@@ -19,9 +19,14 @@ const Card = ({
         const y = e.clientY - rect.top;
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        const rotateX = (y - centerY) / centerY * 10;
-        const rotateY = (centerX - x) / centerX * 10;
-        setRotation({ x: rotateX, y: rotateY });
+
+        if (y < centerY) {
+            const rotateX = (y - centerY) / centerY * 10;
+            const rotateY = (centerX - x) / centerX * 10;
+            setRotation({ x: rotateX, y: rotateY });
+        } else {
+            setRotation({ x: 0, y: 0 }); 
+        }
     };
 
     const handleMouseLeave = () => {
