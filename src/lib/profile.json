@@ -193,12 +193,12 @@
   "constellation": {
     "nodes": [
       {
-        "id": "me", "label": "alonso", "x": 0.50, "y": 0.50, "size": 18,
+        "id": "me", "label": "Alonso", "x": 0.50, "y": 0.50, "size": 18,
         "description": "",
         "links": []
       },
       {
-        "id": "ai", "label": "ai", "x": 0.50, "y": 0.35, "size": 16,
+        "id": "ai", "label": "AI", "x": 0.50, "y": 0.35, "size": 16,
         "description": "Where most of my attention goes. Pulled in by what AI can do once it stops being a demo and starts moving real numbers.",
         "links": [
           { "label": "About",      "href": "/about" },
@@ -208,7 +208,7 @@
         ]
       },
       {
-        "id": "agents", "label": "agents", "x": 0.670, "y": 0.330, "size": 13,
+        "id": "agents", "label": "Agents", "x": 0.670, "y": 0.330, "size": 13,
         "description": "Tool-use loops and voice agents. Structured traces, retries that don't pretend a failed call succeeded. The part of an agent that isn't the model.",
         "links": [
           { "label": "SDS Caller", "href": "/work#sdscaller" },
@@ -217,7 +217,7 @@
         ]
       },
       {
-        "id": "retrieval", "label": "retrieval", "x": 0.760, "y": 0.500, "size": 13,
+        "id": "retrieval", "label": "Retrieval", "x": 0.760, "y": 0.500, "size": 13,
         "description": "Hybrid retrieval, RAG, reranking. Built it for drug discovery, document extraction, and chemical-emergency lookup. Most of the win is in the data shape.",
         "links": [
           { "label": "MedGet",     "href": "/work#medget" },
@@ -226,7 +226,7 @@
         ]
       },
       {
-        "id": "systems", "label": "systems", "x": 0.650, "y": 0.760, "size": 12,
+        "id": "systems", "label": "Systems", "x": 0.650, "y": 0.760, "size": 12,
         "description": "GCP, AWS, Terraform, CI/CD. The unsexy work that lets the cool work ship. Also the systems layer underneath: distributed services, databases, the foundations that decide whether things wake you up at 3 AM.",
         "links": [
           { "label": "ExtractAI",  "href": "/work#extractai" },
@@ -235,7 +235,7 @@
         ]
       },
       {
-        "id": "fullstack", "label": "full-stack", "x": 0.500, "y": 0.820, "size": 12,
+        "id": "fullstack", "label": "Full-Stack", "x": 0.500, "y": 0.820, "size": 12,
         "description": "React, Node, Python, Firebase. Years of putting buttons on top of databases until they actually do something useful. Belgium, NeuroX1, and A&M classes all built this muscle.",
         "links": [
           { "label": "PrinterHub",         "href": "/work#printerhub" },
@@ -245,7 +245,7 @@
         ]
       },
       {
-        "id": "research", "label": "research", "x": 0.245, "y": 0.755, "size": 11,
+        "id": "research", "label": "Research", "x": 0.245, "y": 0.755, "size": 11,
         "description": "More R&D than academic, but the wavelet-paper side counts too. As AI Solutions Specialist at the stealth startup I spent months prototyping AI ideas and scoping what could ship. The M.S. coming up is applied AI focused, not pure research.",
         "links": [
           { "label": "Wavelet for Hearts", "href": "/work#wavelet-hearts" },
@@ -255,7 +255,7 @@
         ]
       },
       {
-        "id": "startups", "label": "startups", "x": 0.231, "y": 0.231, "size": 11,
+        "id": "startups", "label": "Startups", "x": 0.231, "y": 0.231, "size": 11,
         "description": "Working at one in stealth right now, and built for one (NeuroX1) earlier. I read about how startups get funded and structured more than I should. The shape of how things actually get built fascinates me.",
         "links": [
           { "label": "ExtractAI",  "href": "/work#extractai" },
@@ -265,7 +265,7 @@
         ]
       },
       {
-        "id": "ml-dl", "label": "ml · dl · rl", "x": 0.100, "y": 0.500, "size": 10,
+        "id": "ml-dl", "label": "ML · DL · RL", "x": 0.100, "y": 0.500, "size": 10,
         "description": "Where the curiosity started. PyTorch, JAX, deep RL coursework. A quiet appreciation for systems that converge.",
         "links": [
           { "label": "LLMRouter", "href": "/work#llmrouter" },
@@ -273,14 +273,14 @@
         ]
       },
       {
-        "id": "finance", "label": "finance", "x": 0.730, "y": 0.102, "size": 9,
+        "id": "finance", "label": "Finance", "x": 0.730, "y": 0.102, "size": 9,
         "description": "Capital structures, markets, the way money moves. Adjacent to the startup curiosity. Mostly in the reading column for now.",
         "links": [
           { "label": "About", "href": "/about" }
         ]
       },
       {
-        "id": "quantum", "label": "quantum", "x": 0.260, "y": 0.916, "size": 9,
+        "id": "quantum", "label": "Quantum", "x": 0.260, "y": 0.916, "size": 9,
         "description": "Highly fascinated by where it's going. The hardware is interesting; the software side, particularly its intersection with AI and ML, is where I think the long-term impact lands. Little hands-on yet. Building it in via personal projects alongside the M.S.",
         "links": [
           { "label": "About", "href": "/about" }
@@ -301,15 +301,15 @@
     { "label": "github",   "href": "https://github.com/aperalta03",           "hint": "@aperalta03" },
     { "label": "linkedin", "href": "https://www.linkedin.com/in/aperalta03/", "hint": "/in/aperalta03" },
     { "label": "email",    "href": "mailto:alonso.pe03@gmail.com",            "hint": "email me" },
-    { "label": "resume",   "href": "/files/Alonso Peralta Espinoza (AI Software Engineer) - R10.0 - 2025.pdf", "hint": "pdf · 1 page" }
+    { "label": "resume",   "href": "/files/Alonso Peralta Espinoza (AI Software Engineer) - R10.0 - 2025.pdf", "hint": "~/resume.pdf" }
   ],
 
   "nav": [
-    { "label": "index",   "href": "/",        "key": "index"   },
-    { "label": "about",   "href": "/about",   "key": "about"   },
-    { "label": "work",    "href": "/work",    "key": "work"    },
-    { "label": "now",     "href": "/now",     "key": "now"     },
-    { "label": "resume",  "href": "/resume",  "key": "resume"  },
-    { "label": "contact", "href": "/contact", "key": "contact" }
+    { "label": "Index",   "href": "/",        "key": "index"   },
+    { "label": "About",   "href": "/about",   "key": "about"   },
+    { "label": "Work",    "href": "/work",    "key": "work"    },
+    { "label": "Now",     "href": "/now",     "key": "now"     },
+    { "label": "Resume",  "href": "/resume",  "key": "resume"  },
+    { "label": "Contact", "href": "/contact", "key": "contact" }
   ]
 }

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Head from 'next/head';
 import PageHeader from '../components/PageHeader';
 import PageMeta from '../components/PageMeta';
@@ -6,6 +7,17 @@ import styles from '../styles/Contact.module.css';
 
 export default function ContactPage() {
   const sideLinks = links.filter((l) => l.label !== 'email');
+  const [copied, setCopied] = useState(false);
+
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(identity.email)}`;
+
+  const handleCopy = () => {
+    if (typeof navigator !== 'undefined' && navigator.clipboard) {
+      navigator.clipboard.writeText(identity.email).catch(() => {});
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <>
@@ -37,20 +49,43 @@ export default function ContactPage() {
             </svg>
             <span>{contact.buttonLabel}</span>
           </a>
+          <div className={styles.emailFallback}>
+            <a
+              className={styles.emailFallbackLink}
+              href={gmailUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open in Gmail
+            </a>
+            <span aria-hidden="true" className={styles.emailFallbackSep}>·</span>
+            <button
+              type="button"
+              className={styles.emailFallbackLink}
+              onClick={handleCopy}
+              aria-live="polite"
+            >
+              {copied ? 'Copied' : 'Copy address'}
+            </button>
+          </div>
         </div>
         <div className={styles.links}>
-          {sideLinks.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              className={styles.linkCell}
-              target={l.href.startsWith('http') || l.href.endsWith('.pdf') ? '_blank' : undefined}
-              rel={l.href.startsWith('http') || l.href.endsWith('.pdf') ? 'noopener noreferrer' : undefined}
-            >
-              <span className={styles.linkKey}>{l.label}</span>
-              <span className={styles.linkValue}>{l.hint}</span>
-            </a>
-          ))}
+          {sideLinks.map((l) => {
+            const newTab = l.href.startsWith('http') || l.href.endsWith('.pdf');
+            return (
+              <div key={l.label} className={styles.linkCell}>
+                <span className={styles.linkKey}>{l.label}</span>
+                <a
+                  href={l.href}
+                  className={styles.linkValue}
+                  target={newTab ? '_blank' : undefined}
+                  rel={newTab ? 'noopener noreferrer' : undefined}
+                >
+                  {l.hint}
+                </a>
+              </div>
+            );
+          })}
         </div>
       </section>
     </>

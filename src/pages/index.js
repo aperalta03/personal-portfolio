@@ -42,7 +42,7 @@ export default function HomePage() {
         <div className={styles.graphDots} aria-hidden="true" />
         <div className={styles.graphHead}>
           <h2 className={styles.h2}>
-            An orbit of interests<span className={styles.accent}>.</span>
+            An Orbit of Interests<span className={styles.accent}>.</span>
           </h2>
           <PageMeta idx={2} label="map" />
         </div>
