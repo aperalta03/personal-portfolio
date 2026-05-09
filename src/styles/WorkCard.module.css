@@ -1,0 +1,143 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-margin-top: 96px;
+}
+
+.card:target {
+  outline: 1px solid var(--accent);
+  outline-offset: 8px;
+}
+
+.thumb,
+.image {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  border: 1px solid var(--rule);
+  display: block;
+}
+
+.thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-45);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.kind {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.date {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--fg-55);
+  letter-spacing: 0.08em;
+}
+
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.badges {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+
+.repoBadge,
+.paperBadge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  color: var(--accent);
+  cursor: pointer;
+  transition: color 0.15s ease;
+  outline: none;
+}
+
+.repoBadge:hover,
+.repoBadge:focus-visible,
+.paperBadge:hover,
+.paperBadge:focus-visible {
+  color: var(--fg);
+}
+
+.repoMuted {
+  color: var(--fg-45);
+  cursor: default;
+}
+
+.repoMuted:hover,
+.repoMuted:focus-visible {
+  color: var(--fg-55);
+}
+
+.repoTooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  right: 0;
+  left: auto;
+  padding: 4px 8px;
+  background: var(--fg);
+  color: var(--bg);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  text-wrap: balance;
+  white-space: normal;
+  width: max-content;
+  max-width: min(220px, calc(100vw - 48px));
+  line-height: 1.5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 5;
+}
+
+.repoBadge:hover .repoTooltip,
+.repoBadge:focus-visible .repoTooltip {
+  opacity: 1;
+}
+
+.blurb {
+  margin: 0;
+  font-size: 15px;
+  color: rgba(235, 232, 225, 0.72);
+  line-height: 1.5;
+}

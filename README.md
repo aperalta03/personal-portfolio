@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# personal-website
 
-## Getting Started
+Personal site for Alonso Peralta, AI Software Engineer. Dark editorial design ("Quiet Grotesque"), six pages (`/`, `/about`, `/work`, `/now`, `/resume`, `/contact`), built with Next.js 15 (Pages Router) and statically exported to Firebase Hosting at [alonsoperalta.com](https://alonsoperalta.com).
 
-First, run the development server:
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build & deploy
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm run build                       # static export → ./out
+firebase deploy --only hosting      # publishes ./out to Firebase
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`next.config.mjs` has `output: 'export'`, so `next build` produces the entire deployable site under `out/`. No SSR runtime needed.
 
-## Learn More
+## Where to make common edits
 
-To learn more about Next.js, take a look at the following resources:
+- **Copy / data**: `src/lib/profile.json`. All site text (about paragraphs, now entries, resume rows, work cards, links, nav, constellation graph) lives here. Editing JSON triggers a hot reload in dev.
+- **Theme tokens** (colors, fonts, type scale): `src/styles/globals.css`. The accent color is set by the `--accent: var(--accent-maroon)` line. Swap to `--accent-aggie`, `--accent-indigo`, `--accent-forest`, etc., to recolor site-wide.
+- **Page layout / chrome**: `src/components/Layout.js`, `TopBar.js`, `BottomNav.js`.
+- **A new page**: drop a file in `src/pages/`. Layout wraps it automatically.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── pages/        # file-based routes (index, about, work, now, resume, contact)
+├── components/   # Layout, TopBar, BottomNav, PageHeader, PageMeta, Constellation, WorkCard, FilmGrain
+├── lib/          # profile.json (site data) + profile.js (re-exporter) + hooks/useTick.js
+└── styles/       # globals.css + one .module.css per component/page
+public/
+├── files/        # resume.pdf
+└── images/work/  # TODO: 4:3 work card thumbnails
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For deeper notes see `CLAUDE.md` (root) and the per-folder `CLAUDE.md` files in `src/components/`, `src/styles/`, `src/lib/`.

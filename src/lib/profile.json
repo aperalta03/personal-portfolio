@@ -1,0 +1,315 @@
+{
+  "identity": {
+    "name": "Alonso Peralta Espinoza",
+    "displayName": "Alonso Peralta",
+    "role": "AI Software Engineer",
+    "now": "Lead AI Engineer @ Stealth Startup",
+    "location": "Texas",
+    "locale": "TEXAS",
+    "graduation": "May 2026",
+    "schoolPath": "B.S. May 2026 · M.S. Fall 2026",
+    "school": "Texas A&M University",
+    "degree": "B.S. Computer Engineering · Math Minor",
+    "gpa": "3.65 / 4.00",
+    "languages": "English, Spanish",
+    "email": "alonso.pe03@gmail.com",
+    "github": "aperalta03",
+    "githubUrl": "https://github.com/aperalta03",
+    "linkedin": "aperalta03",
+    "linkedinUrl": "https://www.linkedin.com/in/aperalta03/",
+    "resumeUrl": "/files/Alonso Peralta Espinoza (AI Software Engineer) - R10.0 - 2025.pdf",
+    "resumeLabel": "resume · pdf"
+  },
+
+  "hero": {
+    "kicker": "currently · Lead AI Engineer @ Stealth Startup",
+    "headline": ["Alonso", "Peralta"],
+    "lead": "AI software engineer building tools that turn two-week jobs into ten-minute ones. Lead AI Engineer at @@Stealth Startup@@. M.S. Computer Science at Texas A&M.",
+    "leadLink": { "match": "Stealth Startup", "href": "/about" }
+  },
+
+  "about": {
+    "paragraphs": [
+      "I was born in Peru and lived there for sixteen years. Then Alaska for two years to finish high school. After that, Texas A&M for a B.S. in Computer Engineering, and now an M.S. in Computer Science starting this fall.",
+      "AI got me because of impact. Pick the right tool and a two-to-three week document workflow drops to ten minutes. I have watched it happen. The part of this field I keep coming back to is work that moves real numbers for real people.",
+      "Right now I lead AI engineering at @@Stealth Startup@@ remotely while finishing my masters. Before this I did a software engineering study abroad in Singapore, built a 3D-printer-farm platform in Belgium with @@OpenHub@@, worked on drug-discovery RAG for a biotech sponsor through @@Aggies Create@@, and went through the @@Headstarter@@ fellowship with mentors from Google, Meta, and Apple.",
+      "Off the clock: billiards, traveling, reading about finance and startups. Bilingual in English and Spanish."
+    ],
+    "meta": [
+      { "key": "role", "value": "AI Software Engineer" },
+      { "key": "based in", "value": "Texas" },
+      { "key": "education", "value": "B.S. May 2026 · M.S. Fall 2026" }
+    ]
+  },
+
+  "now": {
+    "lead": "What I'm focused on this week, and what's coming up. Updated when something changes.",
+    "entries": [
+      { "date": "this week",     "body": "Graduation week. Wrapping the B.S. and starting the Lead AI Engineer role at the stealth startup." },
+      { "date": "summer 2026",   "body": "Settling into the Lead role. Drafting the AI roadmap and figuring out the next services. Some prep on the side for the M.S." },
+      { "date": "fall 2026",     "body": "M.S. Computer Science begins at Texas A&M. Staying at the startup through it." },
+      { "date": "off the clock", "body": "Billiards, lifting, reading about startups and finance. Spanish stays sharp." }
+    ]
+  },
+
+  "work": {
+    "lead": "A few things worth pointing at. Most of what I build sits behind APIs and inside infra; these are the ones I can talk about.",
+    "items": [
+      {
+        "id": "sdscaller",
+        "date": "Q1 2026",
+        "important": true,
+        "title": "SDS Caller",
+        "kind": "Stealth Startup",
+        "blurb": "AI voice agent for chemical companies. Sounds human, and takes input by reading emotional intent and situational context. RAG over Safety Datasheets. 97% retrieval accuracy on all queries by chemical trade name and scenario.",
+        "repo": { "private": true }
+      },
+      {
+        "id": "extractai",
+        "date": "Q1-Q4 2025",
+        "important": true,
+        "title": "ExtractAI",
+        "kind": "Stealth Startup",
+        "blurb": "Document data extraction service. Cut $2,500 per 1,000 pages to $35. Brought processing from two or three weeks down to ten minutes. 98% OCR accuracy on Safety Datasheets. Built and shipped on GCP.",
+        "repo": { "private": true }
+      },
+      {
+        "id": "track",
+        "date": "Q1 2026",
+        "title": "T.R.A.C.K.",
+        "kind": "Texas A&M",
+        "blurb": "Senior design (CSCE 483) for Texas A&M Formula SAE Electric. On-car telemetry display plus a pit-side web app for live monitoring and configuration. Built the React frontend, contributed to the Express/Firebase backend, and owned the cloud system design. Firebase auth, WebSocket streaming, Fly.io.",
+        "repo": { "url": "https://github.com/evilspoon13/track-web", "label": "View on GitHub" },
+        "paper": "/files/TRACK_Paper.pdf"
+      },
+      {
+        "id": "wavelet-hearts",
+        "date": "Q1 2026",
+        "title": "Wavelet for Hearts",
+        "kind": "Texas A&M",
+        "blurb": "Co-authored research paper for MATH 414 (Fourier Wavelets) at Texas A&M. Wavelet-based singularity detection in ECG signals across five wavelets and two pipelines (CWT and DWT). Best F1 0.907 on QRS detection against the MIT-BIH Arrhythmia Database.",
+        "repo": { "url": "https://github.com/aperalta03/wavelets-for-hearts" },
+        "paper": "/files/WaveletForHearts_Paper.pdf"
+      },
+      {
+        "id": "llmrouter",
+        "date": "Q4 2025",
+        "title": "LLMRouter",
+        "kind": "Texas A&M",
+        "blurb": "Class project for CSCE 642 (Deep Reinforcement Learning) at Texas A&M. DRL system that picks the right LLM per prompt, like the 'auto' model selector in coding agents, balancing cost and capability per task. Five agents (DQN, PPO, LinUCB, PickLLM, Greedy) trained on RouterBench, with feature-based and embedding-based variants and a Streamlit evaluation dashboard.",
+        "repo": { "url": "https://github.com/shantanold/LLMRouter" },
+        "paper": "/files/LLMRouter_Paper.pdf"
+      },
+      {
+        "id": "practice",
+        "date": "Q1 2025",
+        "title": "Practice Problem Generator",
+        "kind": "Texas A&M",
+        "blurb": "CSCE 431 (Software Engineering) project from my Singapore study abroad, built for the Texas A&M Engineering Department. Ruby on Rails platform with 40 templates across 10 topics, generating unlimited practice variants. Team of 6, faculty client.",
+        "repo": { "private": true, "label": "Organization Locked" }
+      },
+      {
+        "id": "medget",
+        "date": "Q1-Q4 2024",
+        "title": "MedGet",
+        "kind": "NeuroX1 × Aggies Create",
+        "blurb": "Drug-candidate research platform for biotech sponsor NeuroX1. Hybrid retrieval and RAG through LangChain (LLM and BioMixtral 8x22B). 5x faster data access and 62% lower cost per employee hour. The sponsor took it on after delivery.",
+        "repo": { "private": true }
+      },
+      {
+        "id": "printerhub",
+        "date": "Q2 2024",
+        "title": "PrinterHub",
+        "kind": "OpenHub",
+        "blurb": "Sole developer on a full-stack platform to remotely manage a 3D-printer farm in Belgium. Took the team from a handful of printers running in parallel to seven times that. React, Node, Python, Firebase.",
+        "repo": { "url": "https://github.com/aperalta03/3D-Printer-Farm" }
+      },
+      {
+        "id": "headstarter",
+        "date": "Q3 2024",
+        "title": "Headstarter Fellowship",
+        "kind": "fellowship",
+        "blurb": "Four full-stack AI projects in three months. LangChain, Pinecone, AWS, GCP, computer vision. Mentored by engineers from Google, Meta, Apple, and DoorDash, plus founders and researchers from Stanford and Berkeley.",
+        "repo": { "url": "https://github.com/search?q=user%3Aaperalta03+topic%3Aheadstarter-fellowship&type=repositories", "label": "Inventory Tracker, Customer Support, BrainstormAI, FlashcardAI" }
+      }
+    ]
+  },
+
+  "resume": {
+    "experience": [
+      {
+        "org": "Stealth Startup",
+        "tenure": "Jan 2025 — Present",
+        "roles": [
+          { "years": "May 2026 —",          "title": "Lead AI Engineer",        "blurb": "Just promoted. Leading and designing multiple AI services. Responsible for the product AI roadmap." },
+          { "years": "Oct 2025 — May 2026", "title": "AI Software Engineer",    "blurb": "Built and shipped ExtractAI, an OCR pipeline on GCP. 98% accuracy on safety datasheets. Replaced weeks of manual document processing with minutes." },
+          { "years": "Jan 2025 — Oct 2025", "title": "AI Solutions Specialist", "blurb": "Internal R&D on AI solutions for company clients. Prototyped, scoped, and figured out what could become real services." }
+        ]
+      },
+      {
+        "org": "Aggies Create",
+        "tenure": "Jan — Dec 2024",
+        "roles": [
+          { "years": "Aug — Dec 2024", "title": "Co-Lead Full-Stack Developer", "blurb": "Co-led a team of 4 to deliver MedGet for biotech sponsor NeuroX1. Hybrid retrieval and RAG through LangChain (LLM and BioMixtral 8x22B). 5x faster access and 62% lower cost per employee hour. The sponsor took it on after delivery." },
+          { "years": "Jan — May 2024", "title": "Full-Stack Developer",         "blurb": "Prototyped the first MedGet with Streamlit and early RAG. Delivered the MVP that secured $2,000 per month in sponsorship." }
+        ]
+      },
+      {
+        "org": "Headstarter.ai",
+        "tenure": "Jul — Sep 2024",
+        "roles": [
+          { "years": "Jul — Sep 2024", "title": "Software Engineering Fellow", "blurb": "Four full-stack AI projects in three months. Mentors from Google, Meta, Apple, and DoorDash. Founders and researchers from Stanford and Berkeley." }
+        ]
+      },
+      {
+        "org": "OpenHub",
+        "tenure": "Jun — Aug 2024",
+        "roles": [
+          { "years": "Jun — Aug 2024", "title": "Software Engineering Intern", "blurb": "Belgium. Sole developer on PrinterHub, a full-stack platform to remotely manage a 3D-printer farm. 7x more printers in parallel." }
+        ]
+      }
+    ],
+    "education": [
+      { "years": "Aug 2022 — May 2026", "title": "B.S. Computer Engineering · Math Minor", "org": "Texas A&M University", "blurb": "GPA 3.65 / 4.00. Coursework: software engineering, databases, algorithms, deep RL, AI, computer systems design." },
+      { "years": "Aug 2026 —",          "title": "M.S. Computer Science",                  "org": "Texas A&M University", "blurb": "Starting Fall 2026." }
+    ],
+    "abroad": [
+      { "years": "Summer 2024", "title": "Software Engineering Abroad",     "org": "Belgium",   "blurb": "Texas A&M study abroad in Belgium. Led directly into the OpenHub internship in Louvain-la-Neuve." },
+      { "years": "Winter 2024", "title": "CSCE 431 - Software Engineering", "org": "Singapore", "blurb": "Software engineering coursework abroad." }
+    ],
+    "stack": [
+      { "key": "languages",      "value": "javascript · python · c++ · sql · ruby" },
+      { "key": "cloud / devops", "value": "gcp · aws · docker · terraform · ci/cd" },
+      { "key": "ai / ml",        "value": "langchain · pinecone · rag · ocr · agents" }
+    ]
+  },
+
+  "contact": {
+    "lead": "Email is the way. I read everything and usually reply within a few days.",
+    "buttonLabel": "Email me",
+    "buttonAriaLabel": "Send email"
+  },
+
+  "constellation": {
+    "nodes": [
+      {
+        "id": "me", "label": "alonso", "x": 0.50, "y": 0.50, "size": 18,
+        "description": "",
+        "links": []
+      },
+      {
+        "id": "ai", "label": "ai", "x": 0.50, "y": 0.35, "size": 16,
+        "description": "Where most of my attention goes. Pulled in by what AI can do once it stops being a demo and starts moving real numbers.",
+        "links": [
+          { "label": "About",      "href": "/about" },
+          { "label": "ExtractAI",  "href": "/work#extractai" },
+          { "label": "SDS Caller", "href": "/work#sdscaller" },
+          { "label": "MedGet",     "href": "/work#medget" }
+        ]
+      },
+      {
+        "id": "agents", "label": "agents", "x": 0.670, "y": 0.330, "size": 13,
+        "description": "Tool-use loops and voice agents. Structured traces, retries that don't pretend a failed call succeeded. The part of an agent that isn't the model.",
+        "links": [
+          { "label": "SDS Caller", "href": "/work#sdscaller" },
+          { "label": "ExtractAI",  "href": "/work#extractai" },
+          { "label": "Resume",     "href": "/resume" }
+        ]
+      },
+      {
+        "id": "retrieval", "label": "retrieval", "x": 0.760, "y": 0.500, "size": 13,
+        "description": "Hybrid retrieval, RAG, reranking. Built it for drug discovery, document extraction, and chemical-emergency lookup. Most of the win is in the data shape.",
+        "links": [
+          { "label": "MedGet",     "href": "/work#medget" },
+          { "label": "ExtractAI",  "href": "/work#extractai" },
+          { "label": "SDS Caller", "href": "/work#sdscaller" }
+        ]
+      },
+      {
+        "id": "systems", "label": "systems", "x": 0.650, "y": 0.760, "size": 12,
+        "description": "GCP, AWS, Terraform, CI/CD. The unsexy work that lets the cool work ship. Also the systems layer underneath: distributed services, databases, the foundations that decide whether things wake you up at 3 AM.",
+        "links": [
+          { "label": "ExtractAI",  "href": "/work#extractai" },
+          { "label": "T.R.A.C.K.", "href": "/work#track" },
+          { "label": "Resume",     "href": "/resume" }
+        ]
+      },
+      {
+        "id": "fullstack", "label": "full-stack", "x": 0.500, "y": 0.820, "size": 12,
+        "description": "React, Node, Python, Firebase. Years of putting buttons on top of databases until they actually do something useful. Belgium, NeuroX1, and A&M classes all built this muscle.",
+        "links": [
+          { "label": "PrinterHub",         "href": "/work#printerhub" },
+          { "label": "T.R.A.C.K.",         "href": "/work#track" },
+          { "label": "MedGet",             "href": "/work#medget" },
+          { "label": "Practice Generator", "href": "/work#practice" }
+        ]
+      },
+      {
+        "id": "research", "label": "research", "x": 0.245, "y": 0.755, "size": 11,
+        "description": "More R&D than academic, but the wavelet-paper side counts too. As AI Solutions Specialist at the stealth startup I spent months prototyping AI ideas and scoping what could ship. The M.S. coming up is applied AI focused, not pure research.",
+        "links": [
+          { "label": "Wavelet for Hearts", "href": "/work#wavelet-hearts" },
+          { "label": "LLMRouter",          "href": "/work#llmrouter" },
+          { "label": "Resume",             "href": "/resume" },
+          { "label": "About",              "href": "/about" }
+        ]
+      },
+      {
+        "id": "startups", "label": "startups", "x": 0.231, "y": 0.231, "size": 11,
+        "description": "Working at one in stealth right now, and built for one (NeuroX1) earlier. I read about how startups get funded and structured more than I should. The shape of how things actually get built fascinates me.",
+        "links": [
+          { "label": "ExtractAI",  "href": "/work#extractai" },
+          { "label": "SDS Caller", "href": "/work#sdscaller" },
+          { "label": "MedGet",     "href": "/work#medget" },
+          { "label": "About",      "href": "/about" }
+        ]
+      },
+      {
+        "id": "ml-dl", "label": "ml · dl · rl", "x": 0.100, "y": 0.500, "size": 10,
+        "description": "Where the curiosity started. PyTorch, JAX, deep RL coursework. A quiet appreciation for systems that converge.",
+        "links": [
+          { "label": "LLMRouter", "href": "/work#llmrouter" },
+          { "label": "Resume",    "href": "/resume" }
+        ]
+      },
+      {
+        "id": "finance", "label": "finance", "x": 0.730, "y": 0.102, "size": 9,
+        "description": "Capital structures, markets, the way money moves. Adjacent to the startup curiosity. Mostly in the reading column for now.",
+        "links": [
+          { "label": "About", "href": "/about" }
+        ]
+      },
+      {
+        "id": "quantum", "label": "quantum", "x": 0.260, "y": 0.916, "size": 9,
+        "description": "Highly fascinated by where it's going. The hardware is interesting; the software side, particularly its intersection with AI and ML, is where I think the long-term impact lands. Little hands-on yet. Building it in via personal projects alongside the M.S.",
+        "links": [
+          { "label": "About", "href": "/about" }
+        ]
+      }
+    ],
+    "edges": [
+      ["me", "ai"], ["me", "fullstack"], ["me", "systems"], ["me", "startups"],
+      ["ai", "agents"], ["ai", "retrieval"], ["ai", "ml-dl"],
+      ["agents", "retrieval"], ["retrieval", "fullstack"], ["fullstack", "systems"],
+      ["systems", "research"], ["ml-dl", "research"], ["ml-dl", "quantum"],
+      ["research", "quantum"],
+      ["startups", "finance"], ["startups", "ai"]
+    ]
+  },
+
+  "links": [
+    { "label": "github",   "href": "https://github.com/aperalta03",           "hint": "@aperalta03" },
+    { "label": "linkedin", "href": "https://www.linkedin.com/in/aperalta03/", "hint": "/in/aperalta03" },
+    { "label": "email",    "href": "mailto:alonso.pe03@gmail.com",            "hint": "email me" },
+    { "label": "resume",   "href": "/files/Alonso Peralta Espinoza (AI Software Engineer) - R10.0 - 2025.pdf", "hint": "pdf · 1 page" }
+  ],
+
+  "nav": [
+    { "label": "index",   "href": "/",        "key": "index"   },
+    { "label": "about",   "href": "/about",   "key": "about"   },
+    { "label": "work",    "href": "/work",    "key": "work"    },
+    { "label": "now",     "href": "/now",     "key": "now"     },
+    { "label": "resume",  "href": "/resume",  "key": "resume"  },
+    { "label": "contact", "href": "/contact", "key": "contact" }
+  ]
+}

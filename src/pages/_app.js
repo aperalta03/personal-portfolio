@@ -1,22 +1,20 @@
-import Head from 'next/head';
+import { Geist, Geist_Mono } from 'next/font/google';
+import { useRouter } from 'next/router';
 import '../styles/globals.css';
+import Layout from '../components/Layout';
 
-export default function MyApp({ Component, pageProps }) {
+const geist = Geist({ subsets: ['latin'], variable: '--sans', display: 'swap' });
+const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--mono', display: 'swap' });
+
+export default function App({ Component, pageProps }) {
+  const router = useRouter();
   return (
-    <>
-      <Head>
-        {/* Bootstrap Icons CDN */}
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-        />
-        {/* Google Font: Lato (optional) */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <Component {...pageProps} />
-    </>
+    <div className={`${geist.variable} ${geistMono.variable}`}>
+      <Layout>
+        <div key={router.asPath} className="pageEnter">
+          <Component {...pageProps} />
+        </div>
+      </Layout>
+    </div>
   );
 }

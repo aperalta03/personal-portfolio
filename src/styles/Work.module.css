@@ -1,0 +1,27 @@
+.section {
+  padding: 64px 64px 24px;
+}
+
+.lead {
+  font-size: 18px;
+  color: var(--fg-70);
+  max-width: 580px;
+  margin-bottom: 56px;
+  line-height: 1.5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 32px;
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 40px 24px 16px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

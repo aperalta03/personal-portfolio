@@ -1,0 +1,10 @@
+.shell {
+  position: relative;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.main {
+  padding-bottom: var(--nav-height);
+}

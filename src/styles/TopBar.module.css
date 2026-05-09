@@ -1,0 +1,33 @@
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding: 20px 64px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--fg-55);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(to bottom, var(--bg) 45%, transparent);
+}
+
+.crumb {
+  cursor: pointer;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.locale {
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .bar {
+    padding: 16px 24px 28px;
+  }
+}

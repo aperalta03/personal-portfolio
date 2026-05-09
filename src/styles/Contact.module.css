@@ -1,0 +1,89 @@
+.section {
+  padding: 120px 64px 80px;
+  min-height: 600px;
+}
+
+.body {
+  max-width: 720px;
+}
+
+.lead {
+  font-size: 22px;
+  color: rgba(235, 232, 225, 0.85);
+  line-height: 1.5;
+  margin: 0 0 40px;
+}
+
+.emailBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--sans);
+  font-size: clamp(28px, 4.5vw, 44px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 18px 28px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.emailBtn:hover,
+.emailBtn:focus-visible {
+  background: var(--accent);
+  color: var(--bg);
+  outline: none;
+}
+
+.emailIcon {
+  width: clamp(20px, 2.6vw, 28px);
+  height: clamp(20px, 2.6vw, 28px);
+}
+
+.links {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  border-top: 1px solid var(--rule);
+  padding-top: 28px;
+}
+
+.linkCell {
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.linkCell:hover .linkValue {
+  color: var(--accent);
+}
+
+.linkKey {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-55);
+}
+
+.linkValue {
+  display: block;
+  margin-top: 6px;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 80px 24px 56px;
+  }
+  .links {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .emailBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

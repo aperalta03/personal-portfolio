@@ -1,0 +1,248 @@
+.section {
+  padding: 64px 64px 24px;
+  max-width: 920px;
+}
+
+.dlBtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dlBtn:hover,
+.dlBtn:focus-visible {
+  background: var(--accent);
+  color: var(--bg);
+  outline: none;
+}
+
+.dlIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  background: var(--fg);
+  color: var(--bg);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.dlBtn:hover .tooltip,
+.dlBtn:focus-visible .tooltip {
+  opacity: 1;
+}
+
+.block {
+  margin-bottom: 48px;
+}
+
+.sectionLabel,
+.stackLabel {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-55);
+  margin-bottom: 18px;
+}
+
+/* Experience: org-grouped LinkedIn-style timeline */
+
+.orgBlock {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 32px;
+  padding: 24px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.orgYears {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--fg-70);
+  letter-spacing: 0.14em;
+  padding-top: 6px;
+}
+
+.orgBody {
+  min-width: 0;
+}
+
+.orgName {
+  margin: 0 0 14px;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+
+.roleList {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 22px;
+  position: relative;
+}
+
+.roleListStacked::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 16px;
+  bottom: 16px;
+  width: 1px;
+  background: var(--rule);
+}
+
+.roleItem {
+  position: relative;
+  padding: 4px 0 18px;
+}
+
+.roleItem:last-child {
+  padding-bottom: 0;
+}
+
+.dot {
+  position: absolute;
+  left: -22px;
+  top: 11px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid var(--accent);
+  background: var(--bg);
+  border-radius: 50%;
+}
+
+.roleCurrent .dot {
+  background: var(--accent);
+}
+
+.roleContent {
+  min-width: 0;
+}
+
+.roleHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.roleTitle {
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+
+.roleYears {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--fg-55);
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+}
+
+.roleBlurb {
+  font-size: 15px;
+  color: rgba(235, 232, 225, 0.72);
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* Simple row (education, abroad) */
+
+.row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 32px;
+  padding: 20px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.years {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--fg-70);
+  letter-spacing: 0.14em;
+  padding-top: 6px;
+}
+
+.title {
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.org {
+  color: var(--accent);
+}
+
+.blurb {
+  font-size: 15px;
+  color: rgba(235, 232, 225, 0.72);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* Stack */
+
+.stackLabel {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.stackGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.stackCell {
+  padding: 16px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.stackKey {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-55);
+}
+
+.stackValue {
+  margin-top: 6px;
+  font-size: 15px;
+  color: rgba(235, 232, 225, 0.85);
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 40px 24px 16px;
+  }
+  .orgBlock,
+  .row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .stackGrid {
+    grid-template-columns: 1fr;
+  }
+}

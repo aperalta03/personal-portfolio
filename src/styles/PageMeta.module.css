@@ -1,0 +1,8 @@
+.meta {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--fg-45);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}

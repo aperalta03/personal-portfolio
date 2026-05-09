@@ -1,0 +1,103 @@
+.hero {
+  min-height: 720px;
+  padding: 80px 64px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kicker {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--fg-45);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.headline {
+  margin: 0;
+  font-size: clamp(96px, 13vw, 172px);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+  text-wrap: balance;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.lead {
+  margin: 36px 0 0;
+  font-size: 22px;
+  color: var(--fg-78);
+  max-width: 720px;
+  line-height: 1.4;
+}
+
+.inlineLink {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+.inlineAccent {
+  color: var(--accent);
+}
+
+.graph {
+  position: relative;
+  min-height: 95vh;
+  padding: 40px 64px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.graphDots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(var(--rule) 1.5px, transparent 1.6px);
+  background-size: 24px 24px;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 25%, transparent 70%);
+  mask-image: radial-gradient(ellipse at center, black 25%, transparent 70%);
+}
+
+.graphHead {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 40px;
+  gap: 24px;
+}
+
+.graphInner {
+  position: relative;
+  z-index: 1;
+}
+
+.h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: 560px;
+    padding: 56px 24px 40px;
+  }
+  .graph {
+    min-height: 80vh;
+    padding: 32px 24px 56px;
+  }
+  .graphHead {
+    margin-bottom: 24px;
+  }
+}
