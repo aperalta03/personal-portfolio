@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import PageHeader from '../components/PageHeader';
+import DotField from '../components/DotField';
 import { resume, identity } from '../lib/profile';
 import styles from '../styles/Resume.module.css';
 
@@ -79,6 +80,7 @@ export default function ResumePage() {
         <title>Resume · Alonso Peralta</title>
         <meta name="description" content="Resume. Experience, education, study abroad, and stack." />
       </Head>
+      <DotField />
       <section className={styles.section}>
         <PageHeader title="Resume" right={<DownloadButton />} />
 

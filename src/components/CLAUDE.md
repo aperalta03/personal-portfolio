@@ -10,6 +10,7 @@
 - **FilmGrain**: fixed-position SVG noise overlay. Single instance, mounted by `Layout`.
 - **Constellation**: SVG graph for `/`. Imports `useTick` for the rAF pulse and reads `PROFILE.nodes` / `PROFILE.edges`.
 - **WorkCard**: used by `/work`. Uses a striped placeholder thumb when `work.image` is absent; renders `<img>` when present.
+- **DotField**: fixed-position background covering the right ~58% of the viewport, behind content (`z-index: -1`, sits above `.shell` bg via `isolation: isolate`). Same dot pattern as the index `.graphDots`, masked with a left-to-right fade so it eases in from the empty area. Hidden under 720px viewport. Used on `/about`, `/now`, `/resume` to fill the empty right half. Render as a sibling of `<section>`.
 
 ## Conventions
 

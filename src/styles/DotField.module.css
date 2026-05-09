@@ -1,0 +1,19 @@
+.field {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  pointer-events: none;
+  z-index: -1;
+  background-image: radial-gradient(var(--rule) 1.4px, transparent 1.6px);
+  background-size: 24px 24px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 35%, black 80%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.6) 35%, black 80%);
+}
+
+@media (max-width: 720px) {
+  .field {
+    display: none;
+  }
+}

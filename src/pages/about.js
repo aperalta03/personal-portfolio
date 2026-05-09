@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import PageHeader from '../components/PageHeader';
 import PageMeta from '../components/PageMeta';
+import DotField from '../components/DotField';
 import { about } from '../lib/profile';
 import styles from '../styles/About.module.css';
 
@@ -21,6 +22,7 @@ export default function AboutPage() {
         <title>About · Alonso Peralta</title>
         <meta name="description" content="About Alonso Peralta. AI software engineer at a stealth startup; Texas A&M senior." />
       </Head>
+      <DotField />
       <section className={styles.section}>
         <PageHeader title="About" right={<PageMeta idx={2} label="about" />} />
         <div className={styles.prose}>

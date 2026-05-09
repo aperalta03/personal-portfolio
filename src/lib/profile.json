@@ -96,7 +96,7 @@
         "date": "Q4 2025",
         "title": "LLMRouter",
         "kind": "Texas A&M",
-        "blurb": "Class project for CSCE 642 (Deep Reinforcement Learning) at Texas A&M. DRL system that picks the right LLM per prompt, like the 'auto' model selector in coding agents, balancing cost and capability per task. Five agents (DQN, PPO, LinUCB, PickLLM, Greedy) trained on RouterBench, with feature-based and embedding-based variants and a Streamlit evaluation dashboard.",
+        "blurb": "Personal project for CSCE 642 (Deep Reinforcement Learning) at Texas A&M. DRL system that picks the right LLM per prompt, like the 'auto' model selector in coding agents, balancing cost and capability per task. Five agents (DQN, PPO, LinUCB, PickLLM, Greedy) trained on RouterBench, with feature-based and embedding-based variants and a Streamlit evaluation dashboard.",
         "repo": { "url": "https://github.com/shantanold/LLMRouter" },
         "paper": "/files/LLMRouter_Paper.pdf"
       },
@@ -178,9 +178,9 @@
       { "years": "Winter 2024", "title": "CSCE 431 - Software Engineering", "org": "Singapore", "blurb": "Software engineering coursework abroad." }
     ],
     "stack": [
-      { "key": "languages",      "value": "javascript · python · c++ · sql · ruby" },
-      { "key": "cloud / devops", "value": "gcp · aws · docker · terraform · ci/cd" },
-      { "key": "ai / ml",        "value": "langchain · pinecone · rag · ocr · agents" }
+      { "key": "languages",      "value": "JavaScript · TypeScript · Python · C++ · SQL · Ruby · Cypher" },
+      { "key": "cloud / devops", "value": "GCP · AWS · Docker · Terraform · CI/CD" },
+      { "key": "ai / ml",        "value": "LangChain · LangGraph · Pinecone · RAG · OCR · Agents" }
     ]
   },
 
