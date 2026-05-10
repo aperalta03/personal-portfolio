@@ -62,6 +62,7 @@
         "title": "SDS Caller",
         "kind": "Stealth Startup",
         "blurb": "AI voice agent for chemical companies. Sounds human, and takes input by reading emotional intent and situational context. RAG over Safety Datasheets. 97% retrieval accuracy on all queries by chemical trade name and scenario.",
+        "image": "/images/work/sdscaller.svg",
         "repo": { "private": true }
       },
       {
@@ -71,6 +72,7 @@
         "title": "ExtractAI",
         "kind": "Stealth Startup",
         "blurb": "Document data extraction service. Cut $2,500 per 1,000 pages to $35. Brought processing from two or three weeks down to ten minutes. 98% OCR accuracy on Safety Datasheets. Built and shipped on GCP.",
+        "image": "/images/work/extractai.svg",
         "repo": { "private": true }
       },
       {
@@ -79,6 +81,7 @@
         "title": "T.R.A.C.K.",
         "kind": "Texas A&M",
         "blurb": "Senior design (CSCE 483) for Texas A&M Formula SAE Electric. On-car telemetry display plus a pit-side web app for live monitoring and configuration. Built the React frontend, contributed to the Express/Firebase backend, and owned the cloud system design. Firebase auth, WebSocket streaming, Fly.io.",
+        "image": "/images/work/track.svg",
         "repo": { "url": "https://github.com/evilspoon13/track-web", "label": "View on GitHub" },
         "paper": "/files/TRACK_Paper.pdf"
       },
@@ -88,6 +91,7 @@
         "title": "Wavelet for Hearts",
         "kind": "Texas A&M",
         "blurb": "Co-authored research paper for MATH 414 (Fourier Wavelets) at Texas A&M. Wavelet-based singularity detection in ECG signals across five wavelets and two pipelines (CWT and DWT). Best F1 0.907 on QRS detection against the MIT-BIH Arrhythmia Database.",
+        "image": "/images/work/wavelet-hearts.svg",
         "repo": { "url": "https://github.com/aperalta03/wavelets-for-hearts" },
         "paper": "/files/WaveletForHearts_Paper.pdf"
       },
@@ -97,6 +101,7 @@
         "title": "LLMRouter",
         "kind": "Texas A&M",
         "blurb": "Personal project for CSCE 642 (Deep Reinforcement Learning) at Texas A&M. DRL system that picks the right LLM per prompt, like the 'auto' model selector in coding agents, balancing cost and capability per task. Five agents (DQN, PPO, LinUCB, PickLLM, Greedy) trained on RouterBench, with feature-based and embedding-based variants and a Streamlit evaluation dashboard.",
+        "image": "/images/work/llmrouter.svg",
         "repo": { "url": "https://github.com/shantanold/LLMRouter" },
         "paper": "/files/LLMRouter_Paper.pdf"
       },
@@ -106,6 +111,7 @@
         "title": "Practice Problem Generator",
         "kind": "Texas A&M",
         "blurb": "CSCE 431 (Software Engineering) project from my Singapore study abroad, built for the Texas A&M Engineering Department. Ruby on Rails platform with 40 templates across 10 topics, generating unlimited practice variants. Team of 6, faculty client.",
+        "image": "/images/work/practice.svg",
         "repo": { "private": true, "label": "Organization Locked" }
       },
       {
@@ -114,6 +120,7 @@
         "title": "MedGet",
         "kind": "NeuroX1 × Aggies Create",
         "blurb": "Drug-candidate research platform for biotech sponsor NeuroX1. Hybrid retrieval and RAG through LangChain (LLM and BioMixtral 8x22B). 5x faster data access and 62% lower cost per employee hour. The sponsor took it on after delivery.",
+        "image": "/images/work/medget.svg",
         "repo": { "private": true }
       },
       {
@@ -122,6 +129,7 @@
         "title": "PrinterHub",
         "kind": "OpenHub",
         "blurb": "Sole developer on a full-stack platform to remotely manage a 3D-printer farm in Belgium. Took the team from a handful of printers running in parallel to seven times that. React, Node, Python, Firebase.",
+        "image": "/images/work/printerhub.svg",
         "repo": { "url": "https://github.com/aperalta03/3D-Printer-Farm" }
       },
       {
@@ -130,6 +138,7 @@
         "title": "Headstarter Fellowship",
         "kind": "fellowship",
         "blurb": "Four full-stack AI projects in three months. LangChain, Pinecone, AWS, GCP, computer vision. Mentored by engineers from Google, Meta, Apple, and DoorDash, plus founders and researchers from Stanford and Berkeley.",
+        "image": "/images/work/headstarter.svg",
         "repo": { "url": "https://github.com/search?q=user%3Aaperalta03+topic%3Aheadstarter-fellowship&type=repositories", "label": "Inventory Tracker, Customer Support, BrainstormAI, FlashcardAI" }
       }
     ]

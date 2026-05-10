@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# firebase (local deploy hash cache; .firebaserc and firebase.json stay tracked)
+/.firebase/
+
 # production
 /build
 
