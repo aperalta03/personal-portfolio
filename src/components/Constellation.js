@@ -37,7 +37,7 @@ const projectPos = (pos) => ({
 
 const isExternalHref = (href) => /^https?:\/\//.test(href);
 
-function NodePopover({ node, livePos, onClose }) {
+function NodePopover({ node, livePos, isNarrow, onClose }) {
   const headingRef = useRef(null);
   const popoverRef = useRef(null);
 
@@ -45,20 +45,22 @@ function NodePopover({ node, livePos, onClose }) {
     headingRef.current?.focus();
   }, []);
 
-  const projected = projectPos(livePos);
-  const right = livePos.x < 0.5;
-  const below = livePos.y < 0.5;
-
-  const positionStyle = {
-    left: `${(projected.x / SVG) * 100}%`,
-    top: `${(projected.y / SVG) * 100}%`,
-    transform: `translate(${right ? '16px' : 'calc(-100% - 16px)'}, ${below ? '16px' : 'calc(-100% - 16px)'})`,
-  };
+  let positionStyle;
+  if (!isNarrow) {
+    const projected = projectPos(livePos);
+    const right = livePos.x < 0.5;
+    const below = livePos.y < 0.5;
+    positionStyle = {
+      left: `${(projected.x / SVG) * 100}%`,
+      top: `${(projected.y / SVG) * 100}%`,
+      transform: `translate(${right ? '16px' : 'calc(-100% - 16px)'}, ${below ? '16px' : 'calc(-100% - 16px)'})`,
+    };
+  }
 
   return (
     <div
       ref={popoverRef}
-      className={styles.popover}
+      className={`${styles.popover} ${isNarrow ? styles.popoverMobile : ''}`}
       style={positionStyle}
       role="dialog"
       aria-labelledby={`popover-title-${node.id}`}
@@ -112,6 +114,8 @@ function NodePopover({ node, livePos, onClose }) {
 
 export default function Constellation() {
   const [reduceMotion, setReduceMotion] = useState(false);
+  const [canHover, setCanHover] = useState(true);
+  const [isNarrow, setIsNarrow] = useState(false);
   const [hoveredId, setHoveredId] = useState(null);
   const [selectedId, setSelectedId] = useState(null);
 
@@ -121,6 +125,21 @@ export default function Constellation() {
     update();
     mq.addEventListener('change', update);
     return () => mq.removeEventListener('change', update);
+  }, []);
+
+  useEffect(() => {
+    const mqHover = window.matchMedia('(hover: hover)');
+    const mqNarrow = window.matchMedia('(max-width: 640px)');
+    const syncHover = () => setCanHover(mqHover.matches);
+    const syncNarrow = () => setIsNarrow(mqNarrow.matches);
+    syncHover();
+    syncNarrow();
+    mqHover.addEventListener('change', syncHover);
+    mqNarrow.addEventListener('change', syncNarrow);
+    return () => {
+      mqHover.removeEventListener('change', syncHover);
+      mqNarrow.removeEventListener('change', syncNarrow);
+    };
   }, []);
 
   useEffect(() => {
@@ -242,7 +261,7 @@ export default function Constellation() {
           const isSelected = selectedId === n.id;
           const focused = isHovered || isSelected;
           const baseR = isMe ? 16 : 8;
-          const hitR = isMe ? 40 : 32;
+          const hitR = isMe ? 40 : isNarrow ? 56 : 32;
           const dotFill = isMe || isSelected
             ? 'var(--accent)'
             : 'rgba(235,232,225,0.85)';
@@ -272,8 +291,8 @@ export default function Constellation() {
               aria-label={isMe ? undefined : `${n.label} interest`}
               aria-haspopup={isMe ? undefined : 'dialog'}
               aria-expanded={isMe ? undefined : isSelected}
-              onMouseEnter={() => setHoveredId(n.id)}
-              onMouseLeave={() => setHoveredId(null)}
+              onMouseEnter={canHover ? () => setHoveredId(n.id) : undefined}
+              onMouseLeave={canHover ? () => setHoveredId(null) : undefined}
               onFocus={() => setHoveredId(n.id)}
               onBlur={() => setHoveredId(null)}
               onClick={handleNodeClick(n.id)}
@@ -309,6 +328,7 @@ export default function Constellation() {
         <NodePopover
           node={selectedNode}
           livePos={liveNodes[selectedNode.id]}
+          isNarrow={isNarrow}
           onClose={() => setSelectedId(null)}
         />
       )}
