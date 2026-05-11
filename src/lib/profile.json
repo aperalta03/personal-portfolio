@@ -275,7 +275,7 @@
       },
       {
         "id": "ml-dl", "label": "ML · DL · RL", "x": 0.100, "y": 0.500, "size": 10,
-        "description": "Where the curiosity started. PyTorch, JAX, deep RL coursework. A quiet appreciation for systems that converge.",
+        "description": "Where the curiosity started. PyTorch, scikit-learn, Gymnasium, deep RL coursework. A quiet appreciation for systems that converge.",
         "links": [
           { "label": "LLMRouter", "href": "/work#llmrouter" },
           { "label": "Resume",    "href": "/resume" }
