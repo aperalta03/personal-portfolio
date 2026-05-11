@@ -23,7 +23,7 @@ export default function AboutPage() {
         <meta name="description" content="About Alonso Peralta. AI software engineer at a stealth startup; Texas A&M senior." />
       </Head>
       <DotField />
-      <section className={styles.section}>
+      <section className={`${styles.section} reveal`}>
         <PageHeader title="About" right={<PageMeta idx={2} label="about" />} />
         <div className={styles.prose}>
           <p className={styles.firstPara}>

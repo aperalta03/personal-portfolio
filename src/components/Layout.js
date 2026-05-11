@@ -4,6 +4,7 @@ import TopBar from './TopBar';
 import BottomNav from './BottomNav';
 import FilmGrain from './FilmGrain';
 import IntroSplash from './IntroSplash';
+import PageLoader from './PageLoader';
 import { PROFILE } from '../lib/profile';
 import styles from '../styles/Layout.module.css';
 
@@ -34,6 +35,7 @@ export default function Layout({ children }) {
       <main className={styles.main}>{children}</main>
       <BottomNav />
       <IntroSplash />
+      <PageLoader />
     </div>
   );
 }

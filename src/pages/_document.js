@@ -2,8 +2,12 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 const introCheckScript = `
 try {
-  if (sessionStorage.getItem('intro-played')) {
-    document.documentElement.classList.add('intro-played');
+  var p = window.location.pathname;
+  var isHome = p === '/' || p === '/index.html' || p === '';
+  if (isHome) {
+    document.documentElement.classList.add('intro-active', 'intro-splash');
+  } else {
+    document.documentElement.classList.add('intro-active', 'intro-bar');
   }
 } catch (e) {}
 `;

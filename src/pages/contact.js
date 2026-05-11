@@ -25,7 +25,7 @@ export default function ContactPage() {
         <title>Contact · Alonso Peralta</title>
         <meta name="description" content="Get in touch with Alonso Peralta." />
       </Head>
-      <section className={styles.section}>
+      <section className={`${styles.section} reveal`}>
         <PageHeader title="Say hi" right={<PageMeta idx={6} label="contact" />} />
         <div className={styles.body}>
           <p className={styles.lead}>{contact.lead}</p>

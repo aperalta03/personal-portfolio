@@ -81,7 +81,7 @@ export default function ResumePage() {
         <meta name="description" content="Resume. Experience, education, study abroad, and stack." />
       </Head>
       <DotField />
-      <section className={styles.section}>
+      <section className={`${styles.section} reveal`}>
         <PageHeader title="Resume" right={<DownloadButton />} />
 
         <div className={styles.block}>

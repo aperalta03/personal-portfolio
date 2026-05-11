@@ -13,7 +13,7 @@ export default function NowPage() {
         <meta name="description" content="What Alonso is focused on this week, and a few months back." />
       </Head>
       <DotField />
-      <section className={styles.section}>
+      <section className={`${styles.section} reveal`}>
         <PageHeader title="Now" right={<PageMeta idx={4} label="now" />} />
         <p className={styles.lead}>{now.lead}</p>
         <div className={styles.entries}>

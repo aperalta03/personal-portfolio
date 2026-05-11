@@ -11,7 +11,7 @@ export default function TopBar() {
   const year = new Date().getFullYear();
 
   return (
-    <header className={styles.bar}>
+    <header className={`${styles.bar} revealDown`}>
       <Link href="/" className={styles.crumb}>
         {identity.displayName} · <span className={styles.accent}>{currentKey}</span>
       </Link>

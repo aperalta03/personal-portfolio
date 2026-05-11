@@ -35,7 +35,7 @@ export default function WorkPage() {
         <title>Work · Alonso Peralta</title>
         <meta name="description" content="Projects: ExtractAI, MedGet, PrinterHub, Practice Problem Generator, Headstarter Fellowship." />
       </Head>
-      <section className={styles.section}>
+      <section className={`${styles.section} reveal`}>
         <PageHeader title="Work" right={<PageMeta idx={3} label="work" />} />
         <p className={styles.lead}>{work.lead}</p>
         <div className={styles.grid}>

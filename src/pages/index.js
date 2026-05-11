@@ -31,22 +31,24 @@ export default function HomePage() {
       </Head>
 
       <section className={styles.hero}>
-        <div className={styles.kicker}>── {hero.kicker}</div>
+        <div className={`${styles.kicker} reveal`} style={{ '--reveal-delay': '0ms' }}>── {hero.kicker}</div>
         <h1 className={styles.headline}>
           {hero.headline[0]}<br />{hero.headline[1]}<span className={styles.accent}>.</span>
         </h1>
-        <p className={styles.lead}>{renderLead(hero.lead, hero.leadLink)}</p>
+        <p className={`${styles.lead} reveal`} style={{ '--reveal-delay': '140ms' }}>
+          {renderLead(hero.lead, hero.leadLink)}
+        </p>
       </section>
 
       <section className={styles.graph}>
         <div className={styles.graphDots} aria-hidden="true" />
-        <div className={styles.graphHead}>
+        <div className={`${styles.graphHead} reveal`} style={{ '--reveal-delay': '260ms' }}>
           <h2 className={styles.h2}>
             An Orbit of Interests<span className={styles.accent}>.</span>
           </h2>
           <PageMeta idx={2} label="map" />
         </div>
-        <div className={styles.graphInner}>
+        <div className={`${styles.graphInner} reveal`} style={{ '--reveal-delay': '380ms' }}>
           <Constellation />
         </div>
       </section>

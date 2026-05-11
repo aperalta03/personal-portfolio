@@ -8,7 +8,11 @@ export default function BottomNav() {
   const year = new Date().getFullYear();
 
   return (
-    <nav className={styles.nav} aria-label="Primary">
+    <nav
+      className={`${styles.nav} reveal`}
+      style={{ '--reveal-delay': '80ms' }}
+      aria-label="Primary"
+    >
       <ul className={styles.links}>
         {PROFILE.nav.map((n) => {
           const active = router.pathname === n.href;
