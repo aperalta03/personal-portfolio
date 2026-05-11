@@ -56,6 +56,15 @@
     "lead": "A few things worth pointing at. Most of what I build sits behind APIs and inside infra; these are the ones I can talk about.",
     "items": [
       {
+        "id": "portfolio",
+        "date": "Q2 2026",
+        "title": "alonsoperalta.com",
+        "kind": "Personal",
+        "blurb": "This site. Next.js 15 with React 19, statically exported and served on Firebase Hosting. GitHub Actions pipeline lints, builds, and deploys on every push to main. Animated orbit-of-interests constellation on the home page. Single accent color, oversized grotesque headlines, custom SVG illustrations for every project.",
+        "image": "/images/work/portfolio.svg",
+        "repo": { "url": "https://github.com/aperalta03/personal-portfolio" }
+      },
+      {
         "id": "sdscaller",
         "date": "Q1 2026",
         "important": true,
