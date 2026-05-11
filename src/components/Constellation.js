@@ -114,7 +114,6 @@ function NodePopover({ node, livePos, isNarrow, onClose }) {
 
 export default function Constellation() {
   const [reduceMotion, setReduceMotion] = useState(false);
-  const [canHover, setCanHover] = useState(true);
   const [isNarrow, setIsNarrow] = useState(false);
   const [hoveredId, setHoveredId] = useState(null);
   const [selectedId, setSelectedId] = useState(null);
@@ -128,18 +127,11 @@ export default function Constellation() {
   }, []);
 
   useEffect(() => {
-    const mqHover = window.matchMedia('(hover: hover)');
     const mqNarrow = window.matchMedia('(max-width: 640px)');
-    const syncHover = () => setCanHover(mqHover.matches);
-    const syncNarrow = () => setIsNarrow(mqNarrow.matches);
-    syncHover();
-    syncNarrow();
-    mqHover.addEventListener('change', syncHover);
-    mqNarrow.addEventListener('change', syncNarrow);
-    return () => {
-      mqHover.removeEventListener('change', syncHover);
-      mqNarrow.removeEventListener('change', syncNarrow);
-    };
+    const sync = () => setIsNarrow(mqNarrow.matches);
+    sync();
+    mqNarrow.addEventListener('change', sync);
+    return () => mqNarrow.removeEventListener('change', sync);
   }, []);
 
   useEffect(() => {
@@ -187,7 +179,10 @@ export default function Constellation() {
   return (
     <div
       className={styles.wrap}
-      onClick={() => selectedId && setSelectedId(null)}
+      onClick={() => {
+        if (selectedId) setSelectedId(null);
+        if (hoveredId) setHoveredId(null);
+      }}
     >
       <svg
         viewBox={`0 0 ${SVG} ${SVG}`}
@@ -291,8 +286,12 @@ export default function Constellation() {
               aria-label={isMe ? undefined : `${n.label} interest`}
               aria-haspopup={isMe ? undefined : 'dialog'}
               aria-expanded={isMe ? undefined : isSelected}
-              onMouseEnter={canHover ? () => setHoveredId(n.id) : undefined}
-              onMouseLeave={canHover ? () => setHoveredId(null) : undefined}
+              onPointerEnter={(e) => {
+                if (e.pointerType === 'mouse') setHoveredId(n.id);
+              }}
+              onPointerLeave={(e) => {
+                if (e.pointerType === 'mouse') setHoveredId(null);
+              }}
               onFocus={() => setHoveredId(n.id)}
               onBlur={() => setHoveredId(null)}
               onClick={handleNodeClick(n.id)}
