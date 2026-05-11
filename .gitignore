@@ -19,6 +19,8 @@
 
 # firebase (local deploy hash cache; .firebaserc and firebase.json stay tracked)
 /.firebase/
+firebase-debug.log
+firebase-debug.*.log
 
 # production
 /build
