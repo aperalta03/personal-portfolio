@@ -11,6 +11,7 @@
 - **Constellation**: SVG graph for `/`. Imports `useTick` for the rAF pulse and reads `PROFILE.nodes` / `PROFILE.edges`.
 - **WorkCard**: used by `/work`. Uses a striped placeholder thumb when `work.image` is absent; renders `<img>` when present.
 - **DotField**: fixed-position background covering the right ~58% of the viewport, behind content (`z-index: -1`, sits above `.shell` bg via `isolation: isolate`). Same dot pattern as the index `.graphDots`, masked with a left-to-right fade so it eases in from the empty area. Hidden under 720px viewport. Used on `/about`, `/now`, `/resume` to fill the empty right half. Render as a sibling of `<section>`.
+- **IntroSplash**: one-shot brand splash mounted by `Layout`. Plays only on first tab visit (gated via `sessionStorage.intro-played`). Returning visitors are detected before hydration via an inline `<script>` in `_document.js` that adds `html.intro-played` for a CSS short-circuit (`display: none`), preventing a flash. The splash auto-dismisses at 1.3s via CSS animation, then unmounts at 1.7s; click or Escape skips early. Honors `prefers-reduced-motion` by collapsing all animations to 0.01ms.
 
 ## Conventions
 
