@@ -5,6 +5,13 @@ import DotField from '../components/DotField';
 import { now } from '../lib/profile';
 import styles from '../styles/Now.module.css';
 
+const Entry = ({ date, body }) => (
+  <div className={styles.entry}>
+    <span className={styles.date}>{date}</span>
+    <span className={styles.body}>{body}</span>
+  </div>
+);
+
 export default function NowPage() {
   return (
     <>
@@ -18,11 +25,9 @@ export default function NowPage() {
         <p className={styles.lead}>{now.lead}</p>
         <div className={styles.entries}>
           {now.entries.map((e) => (
-            <div key={e.date} className={styles.entry}>
-              <span className={styles.date}>{e.date}</span>
-              <span className={styles.body}>{e.body}</span>
-            </div>
+            <Entry key={e.date} date={e.date} body={e.body} />
           ))}
+          {now.offTheClock ? <Entry date="off the clock" body={now.offTheClock} /> : null}
         </div>
       </section>
     </>

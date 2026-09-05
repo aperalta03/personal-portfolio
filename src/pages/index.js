@@ -26,8 +26,8 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Alonso Peralta · AI Software Engineer</title>
-        <meta name="description" content="Alonso Peralta. AI software engineer at a stealth startup." />
+        <title>Alonso Peralta · Lead AI Engineer</title>
+        <meta name="description" content="Alonso Peralta. Lead AI engineer at a stealth startup." />
       </Head>
 
       <section className={styles.hero}>
