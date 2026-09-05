@@ -17,6 +17,11 @@
   outline: none;
   transform-box: view-box;
   transform-origin: 0 0;
+}
+
+.nodeScale {
+  transform-box: view-box;
+  transform-origin: 0 0;
   transition: transform 200ms ease-out;
 }
 
@@ -141,7 +146,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .node {
+  .nodeScale {
     transition: none;
   }
   .popover,

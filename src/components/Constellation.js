@@ -134,16 +134,33 @@ export default function Constellation() {
     return () => mqNarrow.removeEventListener('change', sync);
   }, []);
 
+  const clearInteraction = () => {
+    setSelectedId(null);
+    setHoveredId(null);
+    const active = document.activeElement;
+    if (active && active !== document.body && 'blur' in active) {
+      active.blur();
+    }
+  };
+
   useEffect(() => {
     if (selectedId === null) return;
     const onKey = (e) => {
-      if (e.key === 'Escape') setSelectedId(null);
+      if (e.key === 'Escape') clearInteraction();
+    };
+    const onPointerDown = (e) => {
+      if (e.target instanceof Element && e.target.closest(`.${styles.wrap}`)) return;
+      clearInteraction();
     };
     document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
+    document.addEventListener('pointerdown', onPointerDown);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.removeEventListener('pointerdown', onPointerDown);
+    };
   }, [selectedId]);
 
-  const orbitPaused = reduceMotion || hoveredId !== null || selectedId !== null;
+  const orbitPaused = reduceMotion || selectedId !== null;
   const tPulse = useTick({ paused: reduceMotion });
   const tOrbit = useOrbitTime({ paused: orbitPaused });
 
@@ -166,6 +183,9 @@ export default function Constellation() {
     e.stopPropagation();
     if (id === 'me') return;
     setSelectedId((curr) => (curr === id ? null : id));
+    if (selectedId === id) {
+      setHoveredId(null);
+    }
   };
 
   const handleNodeKey = (id) => (e) => {
@@ -180,8 +200,7 @@ export default function Constellation() {
     <div
       className={styles.wrap}
       onClick={() => {
-        if (selectedId) setSelectedId(null);
-        if (hoveredId) setHoveredId(null);
+        if (selectedId || hoveredId) clearInteraction();
       }}
     >
       <svg
@@ -280,7 +299,7 @@ export default function Constellation() {
             <g
               key={n.id}
               className={groupClass}
-              style={{ transform: `translate(${P.x}px, ${P.y}px) scale(${targetScale})` }}
+              style={{ transform: `translate(${P.x}px, ${P.y}px)` }}
               tabIndex={isMe ? -1 : 0}
               role={isMe ? undefined : 'button'}
               aria-label={isMe ? undefined : `${n.label} interest`}
@@ -292,33 +311,36 @@ export default function Constellation() {
               onPointerLeave={(e) => {
                 if (e.pointerType === 'mouse') setHoveredId(null);
               }}
-              onFocus={() => setHoveredId(n.id)}
-              onBlur={() => setHoveredId(null)}
               onClick={handleNodeClick(n.id)}
               onKeyDown={handleNodeKey(n.id)}
             >
-              <circle r={hitR} fill="transparent" />
-              <circle r={baseR * pulse} fill={dotFill} style={{ pointerEvents: 'none' }} />
-              {isMe && (
-                <circle
-                  r={34}
-                  fill="none"
-                  stroke="var(--accent)"
-                  strokeWidth="1"
-                  opacity="0.45"
-                  style={{ pointerEvents: 'none' }}
-                />
-              )}
-              <text
-                x={isMe ? 32 : 18}
-                y={6}
-                fill={labelFill}
-                fontSize={isMe ? 26 : 18}
-                fontWeight={isMe || focused ? 600 : 400}
-                fontFamily={isMe ? 'var(--sans)' : 'var(--mono)'}
+              <g
+                className={styles.nodeScale}
+                style={{ transform: `scale(${targetScale})` }}
               >
-                {n.label}
-              </text>
+                <circle r={hitR} fill="transparent" />
+                <circle r={baseR * pulse} fill={dotFill} style={{ pointerEvents: 'none' }} />
+                {isMe && (
+                  <circle
+                    r={34}
+                    fill="none"
+                    stroke="var(--accent)"
+                    strokeWidth="1"
+                    opacity="0.45"
+                    style={{ pointerEvents: 'none' }}
+                  />
+                )}
+                <text
+                  x={isMe ? 32 : 18}
+                  y={6}
+                  fill={labelFill}
+                  fontSize={isMe ? 26 : 18}
+                  fontWeight={isMe || focused ? 600 : 400}
+                  fontFamily={isMe ? 'var(--sans)' : 'var(--mono)'}
+                >
+                  {n.label}
+                </text>
+              </g>
             </g>
           );
         })}
@@ -328,7 +350,7 @@ export default function Constellation() {
           node={selectedNode}
           livePos={liveNodes[selectedNode.id]}
           isNarrow={isNarrow}
-          onClose={() => setSelectedId(null)}
+          onClose={clearInteraction}
         />
       )}
     </div>
