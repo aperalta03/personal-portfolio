@@ -17,7 +17,7 @@
     "githubUrl": "https://github.com/aperalta03",
     "linkedin": "aperalta03",
     "linkedinUrl": "https://www.linkedin.com/in/aperalta03/",
-    "resumeUrl": "/files/Alonso_Peralta_AI_SWE_v01_2026.pdf",
+    "resumeUrl": "/files/Alonso_Peralta_AI_SWE_v02_2026.pdf",
     "resumeLabel": "resume · pdf"
   },
 
@@ -326,7 +326,7 @@
     { "label": "github",   "href": "https://github.com/aperalta03",           "hint": "@aperalta03" },
     { "label": "linkedin", "href": "https://www.linkedin.com/in/aperalta03/", "hint": "/in/aperalta03" },
     { "label": "email",    "href": "mailto:alonso.pe03@gmail.com",            "hint": "email me" },
-    { "label": "resume",   "href": "/files/Alonso_Peralta_AI_SWE_v01_2026.pdf", "hint": "~/resume.pdf" }
+    { "label": "resume",   "href": "/files/Alonso_Peralta_AI_SWE_v02_2026.pdf", "hint": "~/resume.pdf" }
   ],
 
   "nav": [
