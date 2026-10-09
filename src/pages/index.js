@@ -7,13 +7,19 @@ import styles from '../styles/Index.module.css';
 
 const renderLead = (text, link) => {
   if (!link) return text;
+  const external = /^https?:\/\//.test(link.href);
   const parts = text.split(/(@@[^@]+@@)/g);
   return parts.map((part, i) => {
     const match = part.match(/^@@([^@]+)@@$/);
     if (!match) return <span key={i}>{part}</span>;
     if (match[1] === link.match) {
       return (
-        <Link key={i} href={link.href} className={styles.inlineLink}>
+        <Link
+          key={i}
+          href={link.href}
+          className={styles.inlineLink}
+          {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        >
           {match[1]}
         </Link>
       );
@@ -27,7 +33,7 @@ export default function HomePage() {
     <>
       <Head>
         <title>Alonso Peralta · Lead AI Engineer</title>
-        <meta name="description" content="Alonso Peralta. Lead AI engineer at a stealth startup." />
+        <meta name="description" content="Alonso Peralta. Lead AI engineer at Valenc." />
       </Head>
 
       <section className={styles.hero}>

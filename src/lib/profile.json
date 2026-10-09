@@ -3,7 +3,7 @@
     "name": "Alonso Peralta Espinoza",
     "displayName": "Alonso Peralta",
     "role": "Lead AI Engineer",
-    "now": "Lead AI Engineer @ Stealth Startup",
+    "now": "Lead AI Engineer @ Valenc",
     "location": "Texas",
     "locale": "TEXAS",
     "graduation": "May 2026",
@@ -22,17 +22,17 @@
   },
 
   "hero": {
-    "kicker": "currently · Lead AI Engineer @ Stealth Startup",
+    "kicker": "currently · Lead AI Engineer @ Valenc",
     "headline": ["Alonso", "Peralta"],
-    "lead": "AI software engineer building tools that turn two-week jobs into ten-minute ones. Lead AI Engineer at @@Stealth Startup@@. M.S. Computer Science at Texas A&M.",
-    "leadLink": { "match": "Stealth Startup", "href": "/about" }
+    "lead": "AI software engineer building tools that turn two-week jobs into ten-minute ones. Lead AI Engineer at @@Valenc@@. M.S. Computer Science at Texas A&M.",
+    "leadLink": { "match": "Valenc", "href": "https://www.valenc.com/" }
   },
 
   "about": {
     "paragraphs": [
       "I was born in Peru and lived there for sixteen years. Then Alaska for two years to finish high school. After that, Texas A&M for a B.S. in Computer Engineering, and now an M.S. in Computer Science, expected December 2027.",
       "AI got me because of impact. Pick the right tool and a two-to-three week document workflow drops to ten minutes. I have watched it happen. The part of this field I keep coming back to is work that moves real numbers for real people.",
-      "Right now I lead AI engineering at @@Stealth Startup@@ remotely while doing the M.S. Before this I did a software engineering study abroad in Singapore, built a 3D-printer-farm platform in Belgium with @@OpenHub@@, worked on drug-discovery RAG for a biotech sponsor through @@Aggies Create@@, and went through the @@Headstarter@@ fellowship with mentors from Google, Meta, and Apple.",
+      "Right now I lead AI engineering at @@Valenc@@ remotely while doing the M.S. Before this I did a software engineering study abroad in Singapore, built a 3D-printer-farm platform in Belgium with @@OpenHub@@, worked on drug-discovery RAG for a biotech sponsor through @@Aggies Create@@, and went through the @@Headstarter@@ fellowship with mentors from Google, Meta, and Apple.",
       "Off the clock: billiards, traveling, videogames, reading about finance, startups, and quantum news. Bilingual in English and Spanish."
     ],
     "meta": [
@@ -46,10 +46,10 @@
     "lead": "What I'm focused on this week, plus a running log. Updated when something changes.",
     "offTheClock": "Billiards, lifting, videogames, reading about startups, finance, and quantum news. Spanish stays sharp.",
     "entries": [
-      { "date": "this week",     "body": "Officially starting my Master's. Continuing dev at the stealth startup, pushing AI features on the flagship that drive sales and marketing." },
+      { "date": "this week",     "body": "Officially starting my Master's. Valenc came out of stealth. Continuing dev there, pushing AI features on the flagship that drive sales and marketing." },
       { "date": "fall 2026",     "body": "Cloud System Design and Machine Learning." },
       { "date": "summer 2026",   "body": "Graduated. Settled into the Lead role, drafted the AI roadmap, and prepped for the M.S." },
-      { "date": "spring 2026",   "body": "Graduation week. Wrapping the B.S. and starting the Lead AI Engineer role at the stealth startup. Information Storage and Retrieval and AI." },
+      { "date": "spring 2026",   "body": "Graduation week. Wrapping the B.S. and starting the Lead AI Engineer role at Valenc. Information Storage and Retrieval and AI." },
       { "date": "fall 2025",     "body": "Exploring new AI ideas. Maybe an AI voice agent? First Master's classes through Fast Track: Analysis of Algorithms and Deep RL." },
       { "date": "summer 2025",   "body": "Perfecting ExtractAI." },
       { "date": "spring 2025",   "body": "Excited for new paths in my career." },
@@ -76,7 +76,7 @@
         "date": "Q1 2026",
         "important": true,
         "title": "SDS Caller",
-        "kind": "Stealth Startup",
+        "kind": "Valenc",
         "blurb": "RAG-powered AI voice assistant for emergency responders. Sounds human, and takes input by reading emotional intent and situational context. RAG over Safety Datasheets. 97% retrieval accuracy on queries by chemical trade name and scenario. Took it from POC to MVP.",
         "image": "/images/work/sdscaller.svg",
         "repo": { "private": true }
@@ -86,7 +86,7 @@
         "date": "Q1-Q4 2025",
         "important": true,
         "title": "ExtractAI",
-        "kind": "Stealth Startup",
+        "kind": "Valenc",
         "blurb": "Document data extraction service. Cut $2,000 to $3,000 per 1,000 pages down to $30 to $50. Brought processing from two or three weeks down to ten minutes. 98%+ SDS accuracy, at or above manual labor. Now being productionized with VLMs and pgvector for the flagship.",
         "image": "/images/work/extractai.svg",
         "repo": { "private": true }
@@ -163,7 +163,7 @@
   "resume": {
     "experience": [
       {
-        "org": "Stealth Startup",
+        "org": "Valenc",
         "tenure": "Jan 2025 — Present",
         "roles": [
           { "years": "May 2026 — Present",  "title": "Lead AI Engineer",        "blurb": "Own the AI roadmap for sales and marketing. Productionizing ExtractAI: OCR and layout, cleaning, pgvector, VLM and fine-tuned LLM, so inconsistent PDFs become structured JSON for the flagship. SDS Caller from POC to MVP. Reg Agent, a regulations ML-agent, into POC." },
@@ -271,7 +271,7 @@
       },
       {
         "id": "research", "label": "Research", "x": 0.245, "y": 0.755, "size": 11,
-        "description": "More R&D than academic, but the wavelet-paper side counts too. As AI Solutions Specialist at the stealth startup I spent months prototyping AI ideas and scoping what could ship. The M.S. is applied AI focused, not pure research.",
+        "description": "More R&D than academic, but the wavelet-paper side counts too. As AI Solutions Specialist at Valenc I spent months prototyping AI ideas and scoping what could ship. The M.S. is applied AI focused, not pure research.",
         "links": [
           { "label": "Wavelet for Hearts", "href": "/work#wavelet-hearts" },
           { "label": "LLMRouter",          "href": "/work#llmrouter" },
@@ -281,7 +281,7 @@
       },
       {
         "id": "startups", "label": "Startups", "x": 0.231, "y": 0.231, "size": 11,
-        "description": "Working at one in stealth right now, and built for one (NeuroX1) earlier. I read about how startups get funded and structured more than I should. The shape of how things actually get built fascinates me.",
+        "description": "Working at Valenc right now, and built for one (NeuroX1) earlier. I read about how startups get funded and structured more than I should. The shape of how things actually get built fascinates me.",
         "links": [
           { "label": "ExtractAI",  "href": "/work#extractai" },
           { "label": "SDS Caller", "href": "/work#sdscaller" },

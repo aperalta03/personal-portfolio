@@ -20,7 +20,7 @@ export default function AboutPage() {
     <>
       <Head>
         <title>About · Alonso Peralta</title>
-        <meta name="description" content="About Alonso Peralta. Lead AI engineer at a stealth startup. M.S. Computer Science at Texas A&M." />
+        <meta name="description" content="About Alonso Peralta. Lead AI engineer at Valenc. M.S. Computer Science at Texas A&M." />
       </Head>
       <DotField />
       <section className={`${styles.section} reveal`}>
